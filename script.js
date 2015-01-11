@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-  $("body").append("<div class = 'new_container' width='960px'></div>");
+  //$("body").append("<div class = 'new_container' width='960px'></div>");
   
   for (var a = 1; a <= 16; a++)
   {
-  $(".new_container").append("<div class = 'container'></div>");
+  $("body").append("<div class = 'container'></div>");
   }
   $(".container").height(960/16 - 4);
 
@@ -25,7 +25,7 @@ $("#reset").click(function(){
     for (var i = 1; i < rows; i++)
     {
       $d = $("<div class = 'container'></div>");
-      $(".new_container").append($d);
+      $("body").append($d);
     }
       $(".container").width(960);
       $(".container").height(960/rows - 2);
@@ -37,14 +37,20 @@ $("#reset").click(function(){
     }
       $(".cell").width(960/col - 4);
       $(".cell").height(960/col - 4);
-      
+
       $(".cell").mouseenter(function(){
-        $(this).addClass("black");
+        //$(this).addClass("black");
+        var randomColor = "#"+(Math.random()*0xFFFFFF<<0).toString(16);
+        $(this).css("background-color", randomColor);
     });
-});
-  $(".cell").mouseenter(function(){
-    $(this).addClass("black");
   });
+      $(".cell").mouseenter(function(){
+        //$(this).addClass("black");
+        var randomColor = "#"+(Math.random()*0xFFFFFF<<0).toString(16);
+        var randomOpacity = Math.random();
+        $(this).css("background-color", randomColor);
+        $(this).css("opacity", randomOpacity);
+    });
       $("#clear").click(function(){
         $(".cell").removeClass("black");
   });

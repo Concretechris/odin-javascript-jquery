@@ -11,9 +11,13 @@
 	float: left;
 	height: 100px;
 	width: 100px;
-	border: 1px solid black;
 	display: inline-block;
-	opacity: .2;
+	opacity: .5;
+}
+
+.cell
+{
+	border: 1px solid black;
 }
 
 .black
