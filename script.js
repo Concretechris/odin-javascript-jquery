@@ -52,6 +52,7 @@ $("#reset").click(function(){
         $(this).css("opacity", randomOpacity);
     });
       $("#clear").click(function(){
-        $(".cell").removeClass("black");
+        $(".cell").css("background-color", transparent)
+        //$(".cell").removeClass("black");
   });
 });
