@@ -52,7 +52,7 @@ $("#reset").click(function(){
         $(this).css("opacity", randomOpacity);
     });
       $("#clear").click(function(){
-        var newColor = "#FFF"
+        var newColor = "transparent"
         $(".cell").css("background-color", newColor)
         //$(".cell").removeClass("black");
   });
